@@ -98,11 +98,11 @@ export async function POST(request: NextRequest) {
             [...twoPaths.reimagination, ...twoPaths.efficiency]
         );
 
-        // Step 6: Generate decision questions
+        // Step 6: Generate decision questions (role is optional)
         const decisionLens = await generateDecisionQuestions(
             strategicInference,
             twoPaths,
-            input.role
+            undefined
         );
 
         // Step 7: Generate Foremost Fit
@@ -119,8 +119,6 @@ export async function POST(request: NextRequest) {
             strategicInference,
             twoPaths,
             marketSignals,
-            capabilities,
-            decisionLens,
             foremostFit,
             generatedAt: new Date().toISOString(),
             analysisId,

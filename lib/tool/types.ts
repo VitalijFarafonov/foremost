@@ -42,6 +42,11 @@ export interface StrategicInferenceResult {
     disclaimer: string;
 }
 
+export interface DecisionLensResult {
+    questions: string[];
+    context: string;
+}
+
 // ============================================================================
 // STEP 3: TWO PATHS TO VALUE
 // ============================================================================

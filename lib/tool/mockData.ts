@@ -20,27 +20,27 @@ const mockStrategicPriorities: StrategicPriority[] = [
         priority: 'Market expansion in Asia-Pacific region',
         confidence: 'high',
         evidence: [
-            'Recent press releases announcing partnerships in Singapore and Tokyo',
-            'Q3 investor call mentioned APAC as primary growth driver',
-            'Job postings for regional leadership roles in Hong Kong',
+            { point: 'Recent press releases announcing partnerships in Singapore and Tokyo', source: 'Company PR' },
+            { point: 'Q3 investor call mentioned APAC as primary growth driver', source: 'Investor Relations' },
+            { point: 'Job postings for regional leadership roles in Hong Kong', source: 'LinkedIn' },
         ],
     },
     {
         priority: 'Supply chain resilience and diversification',
         confidence: 'high',
         evidence: [
-            'Annual report highlighted supply chain as strategic priority',
-            'Investment in supplier relationship management systems',
-            'Sustainability report mentions multi-sourcing initiatives',
+            { point: 'Annual report highlighted supply chain as strategic priority', source: 'Annual Report 2025' },
+            { point: 'Investment in supplier relationship management systems', source: 'Press Release' },
+            { point: 'Sustainability report mentions multi-sourcing initiatives', source: 'Sustainability Report' },
         ],
     },
     {
         priority: 'Digital customer experience transformation',
         confidence: 'medium',
         evidence: [
-            'Website redesign and mobile app launch in past 12 months',
-            'Customer service chatbot implementation',
-            'Limited public disclosure on digital strategy',
+            { point: 'Website redesign and mobile app launch in past 12 months', source: 'Company Website' },
+            { point: 'Customer service chatbot implementation', source: 'Product Announcement' },
+            { point: 'Limited public disclosure on digital strategy', source: 'Analyst Report' },
         ],
     },
 ];
@@ -377,12 +377,10 @@ const mockForemostFit: PillarFit[] = [
             ...SERVICES[1].services.slice(0, 2).map((s) => ({
                 title: s.title,
                 description: s.description,
-                group: s.group,
             })),
             ...SERVICES[1].services.slice(4, 6).map((s) => ({
                 title: s.title,
                 description: s.description,
-                group: s.group,
             })),
         ],
         rationale:
@@ -420,10 +418,9 @@ const mockForemostFit: PillarFit[] = [
 
 export const mockAnalysisResult: AnalysisResult = {
     input: {
-        companyName: 'Acme Global Logistics',
         companyUrl: 'https://acmeglobal.example.com',
+        companyName: 'Acme Global Logistics',
         industry: 'Logistics & Supply Chain',
-        role: 'CEO',
     },
     strategicInference: {
         priorities: mockStrategicPriorities,
@@ -438,14 +435,6 @@ export const mockAnalysisResult: AnalysisResult = {
         signals: mockMarketSignals,
         disclaimer:
             'Note: Public disclosures often overstate maturity. These should be viewed as signals of intent, not necessarily established best practice.',
-    },
-    capabilities: {
-        capabilities: mockCapabilities,
-    },
-    decisionLens: {
-        questions: mockDecisionQuestions,
-        context:
-            'These questions are designed for Board or Executive Committee discussion to ensure AI investments align with strategic priorities.',
     },
     foremostFit: {
         pillars: mockForemostFit,

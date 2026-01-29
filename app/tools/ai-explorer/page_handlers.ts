@@ -56,7 +56,6 @@ export async function callStep5(result: AnalysisResult): Promise<any> {
         body: JSON.stringify({
             strategicInference: result.strategicInference,
             useCases: result.twoPaths,
-            role: result.input.role,
         }),
     });
 
@@ -71,7 +70,6 @@ export async function callStep6(result: AnalysisResult): Promise<any> {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             useCases: result.twoPaths,
-            capabilities: result.capabilities,
             strategicInference: result.strategicInference,
         }),
     });
