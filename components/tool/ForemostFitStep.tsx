@@ -17,10 +17,10 @@ function PillarSection({ pillar, index }: { pillar: PillarFit; index: number }) 
 
     // Pillar-specific accent colours for visual differentiation
     const pillarAccents: Record<string, { border: string; bg: string }> = {
-        'Strategic Clarity': { border: 'border-l-[#5B6B7C]', bg: 'bg-[#5B6B7C]/5' },
-        'Applied Intelligence': { border: 'border-l-[#3A4149]', bg: 'bg-[#3A4149]/5' },
-        'Human Potential & Imagination': { border: 'border-l-[#8A9B8F]', bg: 'bg-[#8A9B8F]/5' },
-        'Governance as Enabler': { border: 'border-l-[#5B6B7C]', bg: 'bg-[#5B6B7C]/5' },
+        'Strategic Clarity': { border: 'border-l-[#2B44E4]', bg: 'bg-[#2B44E4]/5' },
+        'Applied Intelligence': { border: 'border-l-[#1E328A]', bg: 'bg-[#1E328A]/5' },
+        'Human Potential & Imagination': { border: 'border-l-[#6B7ADB]', bg: 'bg-[#6B7ADB]/5' },
+        'Governance as Enabler': { border: 'border-l-[#2B44E4]', bg: 'bg-[#2B44E4]/5' },
     };
 
     const accent = pillarAccents[pillar.pillarName] || { border: 'border-l-accent', bg: 'bg-accent/5' };
@@ -55,7 +55,7 @@ function PillarSection({ pillar, index }: { pillar: PillarFit; index: number }) 
             </div>
 
             {/* How Foremost Can Help - Discussion Box with warmer styling */}
-            <div className="bg-[#8A9B8F]/10 border border-[#8A9B8F]/20 rounded-lg p-6 mb-6">
+            <div className="bg-[#6B7ADB]/10 border border-[#6B7ADB]/20 rounded-lg p-6 mb-6">
                 <h4 className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-3">
                     How Foremost Can Help
                 </h4>
@@ -180,10 +180,10 @@ export default function ForemostFitStep({ data, analysisId, onBack }: ForemostFi
                         Schedule a Discussion
                     </a>
                     <Link
-                        href="/how-we-think"
+                        href="/what-we-do"
                         className="inline-flex items-center justify-center px-8 py-4 border-2 border-background/20 text-background rounded-full text-lg font-medium hover:border-background/40 transition-colors duration-300"
                     >
-                        Explore Our Thinking
+                        Explore What We Do
                     </Link>
                 </div>
             </div>

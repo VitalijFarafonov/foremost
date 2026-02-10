@@ -6,11 +6,6 @@ export const seoConfig = {
         description: "Applied intelligence for boards and executive teams. We help leaders navigate AI with clarity, confidence, and measurable outcomes. Strategic AI advisory for UK and EU organisations.",
         keywords: "AI advisory, board AI strategy, executive AI consulting, AI governance, EU AI Act, strategic AI positioning"
     },
-    howWeThink: {
-        title: "How We Think | Foremost.ai",
-        description: "Four core convictions that guide our AI advisory work: Strategic Clarity, Applied Intelligence, Human Potential, and Governance as Enabler. Our intellectual framework for board-level AI strategy.",
-        keywords: "AI strategy framework, AI governance principles, strategic clarity, applied intelligence"
-    },
     howWeWork: {
         title: "How We Work | Foremost.ai",
         description: "Building capability, not dependency. Our partnership approach helps boards and executive teams navigate AI independently with confidence.",

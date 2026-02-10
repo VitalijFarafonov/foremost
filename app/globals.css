@@ -5,25 +5,31 @@
   --background: #F7F8F6;
   --foreground: #1F2328;
 
-  /* Accent Colors */
-  --accent: #5B6B7C;
-  /* Slate Blue */
-  --accent-warm: #3A4149;
-  /* Warm Charcoal for emphasis */
-  --accent-sage: #8A9B8F;
-  /* Soft Sage for subtle highlights */
+  /* Accent Colors — drawn from logo's blue dot */
+  --accent: #2B44E4;
+  /* Deep Blue from logo */
+  --accent-warm: #1E328A;
+  /* Dark Blue for emphasis */
+  --accent-sage: #6B7ADB;
+  /* Light Blue for subtle highlights */
 
   /* Background Variations */
   --background-alt: #FAFAF9;
   /* Lighter Warm Grey */
   --background-card: #F2F4F6;
   /* Very Light Slate */
+
+  /* Border */
+  --border: #E5E7EB;
+  /* Subtle divider — adapts if palette changes */
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-card: var(--background-card);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-border: var(--border);
   --font-sans: var(--font-inter);
 }
 
@@ -35,11 +41,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Utilities for "Calm" animations */
-@utility delay-200 {
-  animation-delay: 200ms;
+/* Accessibility: visible focus ring for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
-@utility delay-300 {
-  animation-delay: 300ms;
+/* Skip-to-content link — visually hidden until focused */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1.5rem;
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 2px solid var(--accent);
+}
+
+.skip-to-content:focus {
+  left: 1rem;
+  top: 1rem;
 }

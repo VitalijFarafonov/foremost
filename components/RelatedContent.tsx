@@ -11,21 +11,24 @@ interface RelatedLink {
 
 interface RelatedContentProps {
     links: RelatedLink[];
+    heading?: string;
 }
 
-export default function RelatedContent({ links }: RelatedContentProps) {
+export default function RelatedContent({ links, heading }: RelatedContentProps) {
     return (
-        <section className="py-20 px-6 border-t border-gray-100">
-            <div className="max-w-5xl mx-auto">
-                <motion.h3
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-2xl md:text-3xl font-medium mb-12"
-                >
-                    Explore More
-                </motion.h3>
+        <section className="py-20 px-6 border-t border-border">
+            <div className="max-w-7xl mx-auto">
+                {heading && (
+                    <motion.h3
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="text-2xl md:text-3xl font-medium mb-12"
+                    >
+                        {heading}
+                    </motion.h3>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {links.map((link, index) => (
                         <motion.div
@@ -37,17 +40,17 @@ export default function RelatedContent({ links }: RelatedContentProps) {
                         >
                             <Link
                                 href={link.href}
-                                className="group block p-6 border border-gray-100 hover:border-accent/20 transition-all duration-300 h-full"
+                                className="group block border border-border p-10 hover:border-accent/30 hover:bg-accent/5 transition-all duration-300 h-full"
                             >
-                                <div className="flex items-start gap-3 mb-3">
-                                    <span className="text-accent text-lg">→</span>
-                                    <h4 className="text-lg font-medium group-hover:text-accent transition-colors">
-                                        {link.title}
-                                    </h4>
-                                </div>
-                                <p className="text-sm text-foreground/60 leading-relaxed">
+                                <h4 className="text-2xl font-medium mb-4 group-hover:text-accent transition-colors">
+                                    {link.title}
+                                </h4>
+                                <p className="text-foreground/60 leading-relaxed mb-6">
                                     {link.description}
                                 </p>
+                                <span className="text-sm font-medium text-accent">
+                                    Learn more →
+                                </span>
                             </Link>
                         </motion.div>
                     ))}

@@ -9,11 +9,11 @@ interface LogoProps {
 export default function Logo({ className = "h-8 w-auto" }: LogoProps) {
     return (
         <Image
-            src="/logo_colour.jpg"
+            src="/logo_colour.svg"
             alt="Foremost.ai"
             width={320}
             height={64}
-            className={className}
+            className={`-ml-1 ${className}`}
             priority
         />
     );

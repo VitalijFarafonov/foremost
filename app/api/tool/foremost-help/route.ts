@@ -1,7 +1,7 @@
 // API endpoint to generate "How Foremost Can Help" for a specific use case
 import { NextRequest, NextResponse } from 'next/server';
 import { callAI, parseAIJSON } from '@/lib/tool/services/aiClient';
-import { PILLARS, SERVICES, HOW_WE_WORK } from '@/lib/content';
+import { PILLARS, SERVICES } from '@/lib/content';
 import type { UseCase } from '@/lib/tool/types';
 
 export const runtime = 'nodejs';
@@ -28,10 +28,7 @@ export async function POST(request: NextRequest) {
             return `${s.title}:\n${serviceList}`;
         }).join('\n\n');
 
-        // Add How We Work philosophy
-        const howWeWorkContext = HOW_WE_WORK.map(h =>
-            `${h.title}: ${h.content}`
-        ).join('\n\n');
+
 
         const prompt = `Given this AI use case, explain in ONE short paragraph how Foremost would approach it.
 

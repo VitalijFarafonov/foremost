@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RelatedContent from "@/components/RelatedContent";
 import Breadcrumb from "@/components/Breadcrumb";
+import CTASection from "@/components/CTASection";
 
 export default function CareersPage() {
     return (
@@ -29,7 +30,7 @@ export default function CareersPage() {
                         transition={{ duration: 0.8, delay: 0.1 }}
                         className="text-xl md:text-2xl text-foreground/70 max-w-3xl leading-relaxed"
                     >
-                        Building the future of board-level AI advisory.
+                        Board-level AI advisory. Done differently.
                     </motion.p>
                 </div>
             </section>
@@ -53,6 +54,44 @@ export default function CareersPage() {
                         </p>
                     </motion.div>
 
+                    {/* The Kind of Work You'll Do */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="mt-16 pt-12 border-t border-foreground/10"
+                    >
+                        <h2 className="text-sm font-medium uppercase tracking-widest text-foreground/40 mb-4">The Work</h2>
+                        <h3 className="text-2xl font-medium mb-8 text-foreground">Advising at the highest level.</h3>
+                        <ul className="space-y-4 text-foreground/70">
+                            <li className="flex items-start">
+                                <span className="text-foreground/30 mr-3">-</span>
+                                <span>Sit alongside CEOs, CFOs, and board chairs to shape how AI strengthens business strategy</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-foreground/30 mr-3">-</span>
+                                <span>Translate complex technical possibilities into clear business decisions</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-foreground/30 mr-3">-</span>
+                                <span>Design governance frameworks that enable confident adoption</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-foreground/30 mr-3">-</span>
+                                <span>Build enterprise AI roadmaps grounded in commercial reality</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-foreground/30 mr-3">-</span>
+                                <span>Lead executive education sessions that change how leaders think about AI</span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-foreground/30 mr-3">-</span>
+                                <span>Navigate the human dynamics (fear, politics, ambition) that determine whether AI initiatives succeed</span>
+                            </li>
+                        </ul>
+                    </motion.div>
+
                     {/* What We Look For */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -64,22 +103,42 @@ export default function CareersPage() {
                         <h2 className="text-2xl font-medium mb-8 text-foreground">What we look for</h2>
                         <ul className="space-y-4 text-foreground/70">
                             <li className="flex items-start">
-                                <span className="text-accent mr-3 mt-1">—</span>
+                                <span className="text-foreground/30 mr-3">-</span>
                                 <span>Strategic thinkers who can translate complexity into clarity for senior leaders</span>
                             </li>
                             <li className="flex items-start">
-                                <span className="text-accent mr-3 mt-1">—</span>
+                                <span className="text-foreground/30 mr-3">-</span>
                                 <span>Client-focused professionals who listen first and build relationships on substance, not hype</span>
                             </li>
                             <li className="flex items-start">
-                                <span className="text-accent mr-3 mt-1">—</span>
+                                <span className="text-foreground/30 mr-3">-</span>
                                 <span>People who value outcomes over outputs and understand that real value comes from scaled impact, not pilots</span>
                             </li>
                             <li className="flex items-start">
-                                <span className="text-accent mr-3 mt-1">—</span>
+                                <span className="text-foreground/30 mr-3">-</span>
                                 <span>Professionals comfortable working across the UK and Europe</span>
                             </li>
                         </ul>
+                    </motion.div>
+
+                    {/* Our Working Culture */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="mt-16 pt-12 border-t border-foreground/10"
+                    >
+                        <h2 className="text-sm font-medium uppercase tracking-widest text-foreground/40 mb-4">Our Working Culture</h2>
+                        <h3 className="text-2xl font-medium mb-6 text-foreground">Built for depth, not volume.</h3>
+                        <div className="space-y-6 text-foreground/70 leading-relaxed">
+                            <p>
+                                We value intellectual rigour, direct communication, and the kind of craft that comes from caring deeply about the quality of advice. There are no time sheets, no billable hour targets, and no bureaucracy.
+                            </p>
+                            <p>
+                                Partners have autonomy over their work and genuine ownership of client relationships. We invest in each other&apos;s development because our reputation depends on the quality of every interaction.
+                            </p>
+                        </div>
                     </motion.div>
 
                     {/* Closing */}
@@ -91,10 +150,13 @@ export default function CareersPage() {
                         className="mt-16 space-y-6"
                     >
                         <p className="text-lg text-foreground/70 leading-relaxed">
-                            We're building a firm where rigorous thinking meets practical execution. Where calm authority replaces hype. Where leaders come for clarity and leave with confidence.
+                            We&apos;re building a firm where rigorous thinking meets practical execution. Where calm authority replaces hype. Where leaders come for clarity and leave with confidence.
                         </p>
                         <p className="text-lg text-foreground/80 font-medium">
-                            If that resonates, we'd like to hear from you.
+                            If that resonates, we&apos;d like to hear from you.
+                        </p>
+                        <p className="text-sm text-foreground/50 leading-relaxed">
+                            We don&apos;t list specific roles; we hire for exceptional people. Reach out to start a conversation.
                         </p>
                     </motion.div>
                 </div>
@@ -105,36 +167,23 @@ export default function CareersPage() {
                 links={[
                     {
                         title: "Who We Are",
-                        description: "Our story, approach, and values",
+                        description: "Partners with backgrounds spanning MIT, Amazon, Microsoft, Deloitte, and EY: practitioners who’ve led AI strategy, technology, and transformation at scale.",
                         href: "/about"
                     },
                     {
-                        title: "How We Think",
-                        description: "The beliefs that guide our work",
-                        href: "/how-we-think"
+                        title: "What We Do",
+                        description: "Advisory services across strategy, applied intelligence, people, and governance.",
+                        href: "/what-we-do"
                     },
                     {
                         title: "How We Work",
-                        description: "Our partnership approach",
+                        description: "Our approach: build your capability, not your dependency. Honest counsel, clear outcomes.",
                         href: "/how-we-work"
                     },
                 ]}
             />
 
-            {/* CTA Section */}
-            <section className="py-32 px-6 bg-accent/5">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-8">
-                        Ready to join us?
-                    </h2>
-                    <a
-                        href="mailto:careers@foremost.ai"
-                        className="inline-flex items-center justify-center px-8 py-4 bg-foreground text-background rounded-full text-lg font-medium hover:bg-accent transition-colors duration-300"
-                    >
-                        Get in Touch
-                    </a>
-                </div>
-            </section>
+            <CTASection headline="Ready to join us?" buttonText="Get in Touch" />
 
             <Footer />
         </main>

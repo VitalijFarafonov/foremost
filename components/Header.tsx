@@ -12,37 +12,22 @@ export default function Header() {
     const pathname = usePathname();
 
     const navLinks = [
+        { name: "What We Do", href: "/what-we-do" },
         { name: "Who We Are", href: "/about" },
-        { name: "How We Think", href: "/how-we-think" },
-        { name: "What We Do", href: "/#what-we-do" },
         { name: "How We Work", href: "/how-we-work" },
         { name: "Careers", href: "/careers" },
     ];
 
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        // Only intercept if its a hash link AND we are on the home page
-        if (href.startsWith('/#') && pathname === '/') {
-            e.preventDefault();
-            const id = href.substring(2);
-            const element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-                setIsOpen(false);
-            }
-        } else {
-            setIsOpen(false);
-        }
+    const handleNavClick = () => {
+        setIsOpen(false);
     };
 
     const isActive = (href: string) => {
-        if (href.startsWith('/#')) {
-            return pathname === '/';
-        }
         return pathname === href;
     };
 
     return (
-        <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-gray-100/10">
+        <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/10">
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="group">
@@ -55,7 +40,7 @@ export default function Header() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            onClick={(e) => handleNavClick(e, link.href)}
+                            onClick={() => handleNavClick()}
                             className={cn(
                                 "text-sm font-medium transition-colors",
                                 isActive(link.href)
@@ -68,7 +53,7 @@ export default function Header() {
                     ))}
                     <a
                         href="mailto:office@foremost.ai"
-                        className="px-5 py-2.5 text-sm font-medium border border-foreground/10 rounded-full hover:bg-foreground hover:text-background transition-all duration-300"
+                        className="px-5 py-2.5 text-sm font-medium border border-foreground/10 rounded-sm hover:bg-foreground hover:text-background transition-all duration-300"
                         aria-label="Send email to office@foremost.ai"
                     >
                         Connect
@@ -97,14 +82,14 @@ export default function Header() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-background border-b border-gray-100"
+                        className="md:hidden bg-background border-b border-border"
                     >
                         <div className="px-6 py-8 flex flex-col gap-6">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    onClick={(e) => handleNavClick(e, link.href)}
+                                    onClick={() => handleNavClick()}
                                     className="text-lg font-medium text-foreground/80"
                                 >
                                     {link.name}

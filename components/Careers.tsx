@@ -23,19 +23,19 @@ export default function Careers() {
                             <h4 className="text-lg font-medium mb-4 text-foreground">What we look for</h4>
                             <ul className="space-y-3 text-foreground/70">
                                 <li className="flex items-start">
-                                    <span className="text-accent mr-3 mt-1">—</span>
+                                    <span className="text-accent mr-3 mt-1">-</span>
                                     <span>Strategic thinkers who can translate complexity into clarity for senior leaders</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <span className="text-accent mr-3 mt-1">—</span>
+                                    <span className="text-accent mr-3 mt-1">-</span>
                                     <span>Client-focused professionals who listen first and build relationships on substance, not hype</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <span className="text-accent mr-3 mt-1">—</span>
+                                    <span className="text-accent mr-3 mt-1">-</span>
                                     <span>People who value outcomes over outputs and understand that real value comes from scaled impact, not pilots</span>
                                 </li>
                                 <li className="flex items-start">
-                                    <span className="text-accent mr-3 mt-1">—</span>
+                                    <span className="text-accent mr-3 mt-1">-</span>
                                     <span>Professionals comfortable working across the UK and Europe, understanding the nuances of different markets and regulatory environments</span>
                                 </li>
                             </ul>

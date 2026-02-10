@@ -48,18 +48,8 @@ export default function WhatWeDo() {
     };
 
     return (
-        <section id="what-we-do" className="py-24 md:py-32 px-6 bg-white border-t border-gray-100">
+        <section id="what-we-do" className="py-24 md:py-32 px-6 bg-background border-t border-border">
             <div className="max-w-7xl mx-auto">
-                {/* Intro Header */}
-                <div className="mb-24 max-w-4xl">
-                    <h2 className="text-sm font-medium uppercase tracking-widest text-foreground/40 mb-4">What We Do</h2>
-                    <h3 className="text-3xl md:text-5xl font-medium tracking-tight mb-8">
-                        {WHAT_WE_DO_INTRO.title}
-                    </h3>
-                    <p className="text-xl text-foreground/70 leading-relaxed max-w-3xl">
-                        {WHAT_WE_DO_INTRO.description}
-                    </p>
-                </div>
 
                 {/* Pillars Accordion */}
                 <div className="space-y-6">
@@ -80,7 +70,7 @@ export default function WhatWeDo() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.6 }}
-                                className="border border-gray-100 rounded-lg overflow-hidden bg-white"
+                                className="border border-border overflow-hidden bg-background"
                             >
                                 {/* Pillar Header (Clickable) */}
                                 <button
@@ -139,19 +129,26 @@ export default function WhatWeDo() {
                                             transition={{ duration: 0.3, ease: "easeInOut" }}
                                             className="overflow-hidden"
                                         >
-                                            <div className="px-8 pb-8 pt-4 border-t border-gray-100">
+                                            <div className="px-8 pb-8 pt-4 border-t border-border">
+                                                {/* Foremost Thinking Callout */}
+                                                {pillar.foremostThinking && (
+                                                    <div className="mb-10 pl-6 border-l-2 border-accent/30 bg-accent/5 py-4 pr-6 rounded-r-lg">
+                                                        <p className="text-sm font-medium text-foreground/50 uppercase tracking-wider mb-2">Foremost Thinking</p>
+                                                        <p className="text-foreground/80 italic leading-relaxed">{pillar.foremostThinking}</p>
+                                                    </div>
+                                                )}
                                                 {/* Service Capabilities */}
                                                 {pillar.services.some((s: any) => s.group) ? (
                                                     <div className="space-y-12">
                                                         {Array.from(new Set(pillar.services.map((s: any) => s.group).filter(Boolean))).map((group: any) => (
                                                             <div key={group} className="space-y-6">
-                                                                <h5 className="text-sm font-semibold uppercase tracking-wider text-foreground/40 border-b border-gray-100 pb-2">
+                                                                <h5 className="text-sm font-medium uppercase tracking-widest text-foreground/40 border-b border-border pb-2">
                                                                     {group}
                                                                 </h5>
                                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                                                                     {pillar.services.filter((s: any) => s.group === group).map((service) => (
-                                                                        <div key={service.title} className="group">
-                                                                            <h5 className="text-lg font-medium mb-3 group-hover:text-accent transition-colors duration-300">
+                                                                        <div key={service.title}>
+                                                                            <h5 className="text-lg font-medium mb-3">
                                                                                 {service.title}
                                                                             </h5>
                                                                             <p className="text-sm text-foreground/60 leading-relaxed">
@@ -166,8 +163,8 @@ export default function WhatWeDo() {
                                                 ) : (
                                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mt-6">
                                                         {pillar.services.map((service) => (
-                                                            <div key={service.title} className="group">
-                                                                <h5 className="text-lg font-medium mb-3 group-hover:text-accent transition-colors duration-300">
+                                                            <div key={service.title}>
+                                                                <h5 className="text-lg font-medium mb-3">
                                                                     {service.title}
                                                                 </h5>
                                                                 <p className="text-sm text-foreground/60 leading-relaxed">
@@ -185,29 +182,6 @@ export default function WhatWeDo() {
                         );
                     })}
                 </div>
-
-                {/* Strategic CTA */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mt-32 pt-16 border-t border-gray-100 text-center"
-                >
-                    <h3 className="text-2xl md:text-3xl font-medium tracking-tight mb-6">
-                        Ready to cut through the noise?
-                    </h3>
-                    <p className="text-foreground/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-                        Let's talk about what matters most.
-                    </p>
-                    <a
-                        href="mailto:office@foremost.ai"
-                        className="inline-flex items-center justify-center px-8 py-4 bg-foreground text-background rounded-full text-lg font-medium hover:bg-accent transition-colors duration-300"
-                        aria-label="Send email to schedule a discussion"
-                    >
-                        Schedule a Discussion
-                    </a>
-                </motion.div>
             </div>
         </section>
     );

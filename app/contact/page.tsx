@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumb from '@/components/Breadcrumb';
+import RelatedContent from '@/components/RelatedContent';
+import CTASection from '@/components/CTASection';
 import { SITE_CONFIG } from '@/lib/content';
 
 export default function ContactPage() {
@@ -29,7 +31,7 @@ export default function ContactPage() {
                         transition={{ duration: 0.8, delay: 0.1 }}
                         className="text-xl md:text-2xl text-foreground/70 max-w-3xl leading-relaxed"
                     >
-                        We work with a small number of boards and executive teams. Let's discuss what's on your mind.
+                        We work with a small number of boards and executive teams at any given time. If you&apos;re thinking seriously about AI&apos;s role in your business strategy, we&apos;d welcome a conversation.
                     </motion.p>
                 </div>
             </section>
@@ -70,6 +72,13 @@ export default function ContactPage() {
                                     LinkedIn →
                                 </a>
                             </div>
+
+                            <div>
+                                <h3 className="text-sm font-medium uppercase tracking-widest text-foreground/40 mb-4">Where We Work</h3>
+                                <p className="text-foreground/70 leading-relaxed">
+                                    Our partners are based across London, Luxembourg, and Brussels. We advise clients throughout the UK and Europe, with engagements delivered through a combination of in-person sessions and sustained remote collaboration.
+                                </p>
+                            </div>
                         </motion.div>
 
                         {/* Right Column: Subscribe Card */}
@@ -87,7 +96,7 @@ export default function ContactPage() {
 
                                 <a
                                     href="mailto:office@foremost.ai?subject=Newsletter%20Subscription&body=I%20would%20like%20to%20subscribe%20to%20Foremost.ai%20quarterly%20insights."
-                                    className="w-full inline-flex items-center justify-center px-8 py-4 bg-foreground text-background font-medium hover:bg-accent transition-colors duration-300"
+                                    className="w-full inline-flex items-center justify-center px-8 py-4 bg-foreground text-background rounded-sm font-medium hover:bg-accent transition-colors duration-300"
                                     aria-label="Subscribe to newsletter via email"
                                 >
                                     Subscribe via Email
@@ -98,6 +107,24 @@ export default function ContactPage() {
                     </div>
                 </div>
             </section>
+
+            {/* Related Content */}
+            <RelatedContent
+                links={[
+                    {
+                        title: "What We Do",
+                        description: "Advisory services across strategy, applied intelligence, people, and governance.",
+                        href: "/what-we-do"
+                    },
+                    {
+                        title: "Who We Are",
+                        description: "Partners with backgrounds spanning MIT, Amazon, Microsoft, Deloitte, and EY: practitioners who've led AI strategy, technology, and transformation at scale.",
+                        href: "/about"
+                    },
+                ]}
+            />
+
+
 
             <Footer />
         </main>

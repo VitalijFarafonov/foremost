@@ -57,7 +57,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased bg-background text-foreground`}
       >
-        {children}
+        <a href="#main-content" className="skip-to-content">
+          Skip to main content
+        </a>
+        <div id="main-content">
+          {children}
+        </div>
         <StickyCTA />
       </body>
     </html>
