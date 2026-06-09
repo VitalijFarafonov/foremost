@@ -369,7 +369,7 @@ const mockForemostFit: PillarFit[] = [
             'Your strategic priorities around APAC expansion and supply chain resilience require clear positioning on where AI creates advantage versus parity. These services help establish strategic direction before execution.',
     },
     {
-        pillarName: PILLARS[1].title, // Applied Intelligence
+        pillarName: PILLARS[1].title, // Disciplined Value
         pillarDescription: PILLARS[1].description,
         foremostThinking: PILLARS[1].foremostThinking,
         relevantUseCases: [...mockReimaginationUseCases, ...mockEfficiencyUseCases],
@@ -387,7 +387,7 @@ const mockForemostFit: PillarFit[] = [
             'Both reimagination and efficiency use cases require disciplined execution from concept to production. These services ensure P&L impact rather than innovation theatre.',
     },
     {
-        pillarName: PILLARS[2].title, // Human Potential & Imagination
+        pillarName: PILLARS[2].title, // Human & Organisational Intelligence
         pillarDescription: PILLARS[2].description,
         foremostThinking: PILLARS[2].foremostThinking,
         relevantUseCases: [mockEfficiencyUseCases[0], mockReimaginationUseCases[1]],

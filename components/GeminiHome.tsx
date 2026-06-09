@@ -78,8 +78,8 @@ export default function GeminiHome() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             { title: 'Strategic Clarity', tagline: 'From noise to clear priorities.', anchor: 'strategic-clarity' },
-                            { title: 'Applied Intelligence', tagline: 'From pilots to scaled value.', anchor: 'applied-intelligence' },
-                            { title: 'Human Potential', tagline: 'Elevating people alongside AI.', anchor: 'human-potential-&-imagination' },
+                            { title: 'Disciplined Value', tagline: 'From pilots to measurable value.', anchor: 'disciplined-value' },
+                            { title: 'Human & Organisational Intelligence', tagline: 'Elevating people with AI.', anchor: 'human-organisational-intelligence' },
                             { title: 'Governance', tagline: 'Guardrails for speed with confidence.', anchor: 'governance-as-enabler' },
                         ].map((pillar, index) => (
                             <motion.div
@@ -114,7 +114,7 @@ export default function GeminiHome() {
                         className="pl-8 border-l-4 border-accent/40 bg-accent/[0.03] py-6 pr-6 rounded-r-lg"
                     >
                         <p className="text-2xl md:text-3xl text-foreground/80 italic leading-relaxed font-light">
-                            &ldquo;There is no standalone AI strategy. There are only business strategies that are more, or less, well-positioned for an AI-enabled world.&rdquo;
+                            &ldquo;There is no such thing as a standalone AI strategy: only business strategies that are more, or less, well accelerated by AI.&rdquo;
                         </p>
                         <p className="text-lg text-foreground/60 leading-relaxed mt-6">
                             This is where every engagement starts. We begin with your business, and only then design, build, and embed AI solutions that deliver measurable value.

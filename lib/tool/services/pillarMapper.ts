@@ -20,8 +20,8 @@ function preAssignUseCasesToPillars(
 ): Map<string, string[]> {
     const pillarMappings = new Map<string, string[]>([
         ['Strategic Clarity', []],
-        ['Applied Intelligence', []],
-        ['Human Potential & Imagination', []],
+        ['Disciplined Value', []],
+        ['Human & Organisational Intelligence', []],
         ['Governance as Enabler', []],
     ]);
 
@@ -36,9 +36,9 @@ function preAssignUseCasesToPillars(
         if (isHighRisk) {
             pillarMappings.get('Governance as Enabler')!.push(uc.id);
         } else if (hasOrganizationalTags) {
-            pillarMappings.get('Human Potential & Imagination')!.push(uc.id);
+            pillarMappings.get('Human & Organisational Intelligence')!.push(uc.id);
         } else {
-            pillarMappings.get('Applied Intelligence')!.push(uc.id);
+            pillarMappings.get('Disciplined Value')!.push(uc.id);
         }
     }
 
@@ -49,7 +49,7 @@ function preAssignUseCasesToPillars(
             !pillarMappings.get('Governance as Enabler')!.includes(uc.id)
     );
     if (reimaginationUseCase) {
-        const aiMappings = pillarMappings.get('Applied Intelligence')!;
+        const aiMappings = pillarMappings.get('Disciplined Value')!;
         const idx = aiMappings.indexOf(reimaginationUseCase.id);
         if (idx > -1) {
             aiMappings.splice(idx, 1);
@@ -103,7 +103,7 @@ For EACH of the four pillars, generate a discussion summary (2-3 sentences) that
 2. References capabilities naturally in lowercase (e.g., "help you assess AI readiness and constraints" not "AI Readiness & Constraints Diagnostic")
 3. Connects to their use cases and strategic priorities where relevant
 
-SPECIAL GUIDANCE FOR HUMAN POTENTIAL & IMAGINATION:
+SPECIAL GUIDANCE FOR HUMAN & ORGANISATIONAL INTELLIGENCE:
 This pillar MUST address how Foremost helps with:
 - Understanding and addressing staff anxiety about AI and job security
 - Overcoming resistance to change and AI adoption
@@ -118,11 +118,11 @@ Return JSON:
       "discussionSummary": "Given your priorities around [specific priorities], Foremost can help you establish clear strategic positioning for AI, assess your readiness and constraints, and build the executive understanding needed to make confident decisions."
     },
     {
-      "pillarName": "Applied Intelligence",
+      "pillarName": "Disciplined Value",
       "discussionSummary": "..."
     },
     {
-      "pillarName": "Human Potential & Imagination",
+      "pillarName": "Human & Organisational Intelligence",
       "discussionSummary": "..."
     },
     {

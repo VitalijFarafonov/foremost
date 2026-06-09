@@ -31,7 +31,7 @@ export default function WhatWeDoPage() {
                         transition={{ duration: 0.8, delay: 0.1 }}
                         className="text-xl md:text-2xl text-foreground/70 max-w-3xl leading-relaxed"
                     >
-                        Applied intelligence for the boardroom.
+                        Applied Intelligence for Leadership.
                     </motion.p>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}

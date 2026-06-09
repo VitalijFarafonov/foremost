@@ -3,7 +3,7 @@
 export const SITE_CONFIG = {
     name: 'Foremost.ai',
     tagline: 'Be foremost.',
-    descriptor: 'Applied intelligence for the boardroom.',
+    descriptor: 'Applied Intelligence for Leadership.',
     email: 'office@foremost.ai',
     linkedin: 'https://www.linkedin.com/company/foremost-ai/',
 };
@@ -51,8 +51,8 @@ export const SERVICES = [
         ]
     },
     {
-        title: 'Applied Intelligence',
-        tagline: 'From pilots to scaled value',
+        title: 'Disciplined Value',
+        tagline: 'From pilots to measurable value',
         description: 'AI creates value in two ways: rethinking business models (Reimagination) or driving productivity (Efficiency). Whichever path is chosen, projects must deliver measurable P&L impact, moving beyond experiments that don\'t scale to real outcomes.',
         foremostThinking: 'Value and ROI are key drivers. If it doesn\'t impact the P&L or the business model, it is just a hobby.',
         services: [
@@ -100,7 +100,7 @@ export const SERVICES = [
         ]
     },
     {
-        title: 'Human Potential & Imagination',
+        title: 'Human & Organisational Intelligence',
         tagline: 'Elevating people with AI',
         description: 'AI implementation is as much about people as it is about technology. Success depends on organisational design, clear roles, and navigating the fears and anxieties that stall adoption. When structures unleash human imagination, AI expands the very boundaries of what is possible.',
         foremostThinking: 'The limit of AI is human imagination. We build the structures that unleash it.',

@@ -46,11 +46,11 @@ export default function CareersPage() {
                         className="space-y-8"
                     >
                         <p className="text-xl text-foreground/80 leading-relaxed">
-                            We're looking for exceptional people who share our commitment to clarity, rigour, and meaningful impact.
+                            We're looking for exceptional people who share our commitment to clarity, rigour, flexibility, and impact.
                         </p>
 
                         <p className="text-lg text-foreground/70 leading-relaxed">
-                            Our work sits at the intersection of strategy, leadership, and applied intelligence. We help boards and executive teams navigate complexity with confidence. That requires people who think deeply, communicate clearly, and understand that great advisory work is built on trust, judgement, and discipline.
+                            Our work sits at the intersection of strategy, leadership, organisational change, and applied intelligence. We help boards and executive teams navigate complexity with confidence. That requires people who think deeply, communicate clearly, and understand that great advisory work is built on trust, judgement, and discipline.
                         </p>
                     </motion.div>
 

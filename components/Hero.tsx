@@ -22,7 +22,7 @@ export default function Hero() {
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                         className="text-xl md:text-2xl lg:text-3xl text-foreground/80 font-normal leading-relaxed text-balance max-w-2xl"
                     >
-                        Applied intelligence for the boardroom.
+                        Applied Intelligence for Leadership.
                     </motion.p>
 
                     <motion.p

@@ -12,11 +12,11 @@ export default function Careers() {
 
                     <div className="space-y-6 text-foreground/70 leading-relaxed">
                         <p className="text-lg md:text-xl">
-                            We're looking for people who share our commitment to clarity, rigour, and meaningful impact.
+                            We're looking for people who share our commitment to clarity, rigour, flexibility, and impact.
                         </p>
 
                         <p>
-                            Our work sits at the intersection of strategy, leadership, and AI advisory. We help boards and executive teams chart a course through complexity with confidence. That requires people who think deeply, communicate clearly, and understand that great advisory work is built on trust, judgement, and discipline.
+                            Our work sits at the intersection of strategy, leadership, organisational change, and applied intelligence. We help boards and executive teams chart a course through complexity with confidence. That requires people who think deeply, communicate clearly, and understand that great advisory work is built on trust, judgement, and discipline.
                         </p>
 
                         <div className="pt-8 border-t border-foreground/10">

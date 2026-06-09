@@ -3,7 +3,7 @@
 export const seoConfig = {
     homepage: {
         title: "Foremost.ai | Board-Level AI Advisory",
-        description: "Applied intelligence for boards and executive teams. We help leaders navigate AI with clarity, confidence, and measurable outcomes. Strategic AI advisory for UK and EU organisations.",
+        description: "Applied Intelligence for Leadership. We help boards and executive teams navigate AI with clarity, confidence, and measurable outcomes. Strategic AI advisory for UK and EU organisations.",
         keywords: "AI advisory, board AI strategy, executive AI consulting, AI governance, EU AI Act, strategic AI positioning"
     },
     howWeWork: {

@@ -18,8 +18,8 @@ function PillarSection({ pillar, index }: { pillar: PillarFit; index: number }) 
     // Pillar-specific accent colours for visual differentiation
     const pillarAccents: Record<string, { border: string; bg: string }> = {
         'Strategic Clarity': { border: 'border-l-[#2B44E4]', bg: 'bg-[#2B44E4]/5' },
-        'Applied Intelligence': { border: 'border-l-[#1E328A]', bg: 'bg-[#1E328A]/5' },
-        'Human Potential & Imagination': { border: 'border-l-[#6B7ADB]', bg: 'bg-[#6B7ADB]/5' },
+        'Disciplined Value': { border: 'border-l-[#1E328A]', bg: 'bg-[#1E328A]/5' },
+        'Human & Organisational Intelligence': { border: 'border-l-[#6B7ADB]', bg: 'bg-[#6B7ADB]/5' },
         'Governance as Enabler': { border: 'border-l-[#2B44E4]', bg: 'bg-[#2B44E4]/5' },
     };
 

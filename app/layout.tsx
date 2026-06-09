@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: 'Foremost.ai | Board-Level AI Advisory',
     template: '%s | Foremost.ai'
   },
-  description: 'Applied intelligence for boards and executive teams. We help leaders navigate AI with clarity, confidence, and measurable outcomes. Strategic AI advisory for UK and EU organisations.',
+  description: 'Applied Intelligence for Leadership. We help boards and executive teams navigate AI with clarity, confidence, and measurable outcomes. Strategic AI advisory for UK and EU organisations.',
   keywords: ['AI advisory', 'board AI strategy', 'executive AI consulting', 'AI governance', 'EU AI Act', 'strategic AI positioning'],
   authors: [{ name: 'Foremost.ai' }],
   openGraph: {
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: 'https://foremost.ai',
     title: 'Foremost.ai | Board-Level AI Advisory',
-    description: 'Applied intelligence for boards and executive teams. Strategic AI advisory that brings clarity, confidence, and measurable outcomes.',
+    description: 'Applied Intelligence for Leadership. Strategic AI advisory that brings clarity, confidence, and measurable outcomes.',
     siteName: 'Foremost.ai',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Foremost.ai | Board-Level AI Advisory',
-    description: 'Applied intelligence for boards and executive teams.',
+    description: 'Applied Intelligence for Leadership.',
   },
   robots: {
     index: true,

@@ -32,7 +32,7 @@ export default function Footer() {
                             <Logo className="h-8 w-auto" />
                         </Link>
                         <p className="text-foreground/60 max-w-sm font-medium">
-                            Applied intelligence for the boardroom.
+                            Applied Intelligence for Leadership.
                         </p>
                         <p className="text-xs text-foreground/30 tracking-wide">
                             London · Luxembourg · Brussels
